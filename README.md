@@ -1,30 +1,138 @@
-# Hotel_management
 
 
-Hotel Management System
-This Java-based Hotel Management System is designed to assist hotel staff and customers in checking room availability and calculating the total stay cost. It streamlines the booking process by categorizing rooms and providing real-time price estimates based on room type and the customer’s stay duration.
+# **Hotel Management System 🏨**  
 
-Features
-Room Availability Check: Quickly verify if rooms are available or booked.
-Price Calculation: Calculates the total cost for a customer’s stay based on:
-Room Category (e.g., Standard, Deluxe, Suite)
-Duration of Stay (number of nights)
-Simple Interface: Provides a user-friendly console interface for inputting and retrieving information.
-How It Works
-Room Availability Check:
-The program maintains a list of available and booked rooms, allowing users to check room availability.
-Stay Cost Calculation:
-Users select a room category and input their intended stay duration.
-The program calculates the total price based on the selected room’s nightly rate and the stay duration.
-Example Usage
-Checking Room Availability:
-Enter a room category to check its availability.
-Calculating Stay Cost:
-Enter the room category and number of nights to get the estimated stay cost.
+A **Java-based Hotel Management System** that allows users to book rooms, manage guests, and handle billing efficiently. This project is designed for both **hotel administrators** and **guests** to simplify hotel operations.  
 
-Future Enhancements
-Potential features for future updates:
+---
 
-Enhanced room search with filters for room amenities
-Detailed invoice generation with breakdowns for each cost category
-Integration with a database to handle larger data sets
+## **Table of Contents**  
+- [Features](#features)  
+- [Technologies Used](#technologies-used)  
+- [Project Structure](#project-structure)  
+- [Installation](#installation)  
+- [Running the Project](#running-the-project)  
+- [Usage](#usage)  
+- [Screenshots](#screenshots)  
+- [Contributing](#contributing)  
+- [License](#license)  
+
+---
+
+## **Features**  
+
+✅ **User Authentication** – Secure login for admin and guests  
+✅ **Room Booking** – Check room availability and book instantly  
+✅ **Guest Management** – Store and retrieve guest details  
+✅ **Billing System** – Automated bill generation and payment processing  
+✅ **Room Service** – Additional services like food and laundry requests  
+✅ **Admin Panel** – Manage rooms, bookings, and guests  
+
+---
+
+## **Technologies Used**  
+
+| Technology  | Description  |
+|-------------|-------------|
+| **Java**  | Core language for backend logic  |
+| **JDBC (Java Database Connectivity)**  | Connecting to MySQL database  |
+| **MySQL**  | Storing hotel, guest, and booking data  |
+| **Swing (Optional)**  | GUI-based interface for hotel management  |
+| **File Handling**  | Storing temporary data (if database not used)  |
+
+---
+
+## **Project Structure**  
+
+```
+Hotel_Management/
+│── src/                     # Source code files
+│   │── models/              # Java classes for Room, Guest, Booking, etc.
+│   │── database/            # Database connection and queries
+│   │── ui/                  # UI components (if using Swing)
+│── resources/               # Configuration files
+│── HotelManagement.java     # Main entry point
+│── README.md                # Project documentation
+```
+
+---
+
+## **Installation**  
+
+### **Prerequisites**  
+Ensure you have the following installed:  
+- [Java JDK (>= 8)](https://www.oracle.com/java/technologies/javase-jdk11-downloads.html)  
+- [MySQL Database](https://www.mysql.com/)  
+- A code editor (Eclipse, IntelliJ IDEA, or VS Code)  
+
+### **Clone the Repository**  
+```bash
+git clone https://github.com/Shreshtasingh/Hotel_management.git
+```
+```bash
+cd Hotel_management
+```
+
+### **Compile the Java Files**  
+```bash
+javac -d bin src/*.java
+```
+
+---
+
+## **Running the Project**  
+
+### **Set Up MySQL Database**  
+1. Start the MySQL server  
+2. Create a database:  
+   ```sql
+   CREATE DATABASE hotel_db;
+   ```
+3. Import the initial database schema:  
+   ```sql
+   USE hotel_db;
+   SOURCE database/init.sql;
+   ```
+4. Update database credentials in `database/DBConnection.java`  
+
+### **Run the Application**  
+```bash
+java -cp bin HotelManagement
+```
+
+---
+
+## **Usage**  
+
+1. **Admin Login** – Manage rooms, guests, and bookings.  
+2. **Guest Registration** – Register new guests and store details.  
+3. **Book a Room** – Select available rooms and confirm booking.  
+4. **Manage Room Services** – Order food, laundry, and cleaning services.  
+5. **Billing System** – Generate invoices for guests during checkout.  
+
+---
+
+## **Screenshots**  
+
+🚀 *You can add screenshots of the console output or GUI here* 🚀  
+
+---
+
+## **Contributing**  
+
+Contributions are welcome! Follow these steps:  
+1. **Fork** this repository.  
+2. **Create** a new branch:  
+   ```bash
+   git checkout -b feature-name
+   ```
+3. **Make your changes** and commit:  
+   ```bash
+   git commit -m "Added new feature"
+   ```
+4. **Push** to your branch:  
+   ```bash
+   git push origin feature-name
+   ```
+5. **Open a Pull Request** and wait for approval.  
+
